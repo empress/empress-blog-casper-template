@@ -58,6 +58,13 @@ fastboot: {
 ember install ember-cli-cjs-transform
 ```
 
+4. fix `ember-casper-template` dependencies
+
+```sh
+ember g ember-casper-template
+```
+
+
 ### Creating Content
 
 This addon comes with helpful blueprints to generate posts and authors for you in the structure it
