@@ -20,7 +20,6 @@
   },
   "scripts": {
     "build": "ember build",
-    "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
@@ -63,7 +62,6 @@
     "ember-cli-moment-shim": "^3.7.1",
     "ember-cli-qunit": "^4.4.0",
     "ember-cli-sri": "^2.1.1",
-    "ember-cli-template-lint": "^1.0.0-beta.1",
     "ember-cli-uglify": "^2.1.0",
     "ember-data": "~2.18.0",
     "ember-disable-prototype-extensions": "^1.1.3",
