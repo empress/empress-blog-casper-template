@@ -7,7 +7,7 @@ const customProperties = require('postcss-custom-properties');
 const postcssImport = require('postcss-import');
 
 module.exports = {
-  name: require('./package').name
+  name: require('./package').name,
 
   options: {
     postcssOptions: {
