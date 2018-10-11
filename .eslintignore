@@ -11,6 +11,7 @@
 
 # misc
 /coverage/
+/assets/js/
 
 # ember-try
 /.node_modules.ember-try/
