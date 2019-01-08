@@ -15,22 +15,5 @@ Blog](https://blog.stonecircle.io). If you use this in production let me know
 [on Twitter](https://twitter.com/real_ate) and I can add a "built with
 ember-ghost-casper-template" wiki.
 
-You do not need to be a web developer to be able to use this system. You just write markdown files
-and the rest of the work is performed by EmberJS' build system.
-
-## Quick Start
-
-```sh
-# if you don't have ember-cli installed already
-npm install -g ember-cli
-
-ember new super-blog
-cd super-blog
-
-ember install ember-ghost ember-ghost-casper-template
-```
-
-It will ask you if you want to update the `index.html` file and you should say yes 👍
-
 If you want to see the blog system running on your local machine just run `npm start` and you will
 be able to navigate to  [http://localhost:4200](http://localhost:4200) to see the blog in action.
