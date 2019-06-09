@@ -4,6 +4,7 @@ image: /images/advanced.jpg
 imageMeta:
   attribution:
   attributionLink:
+  alt:
 featured: true
 authors:
   - ghost
