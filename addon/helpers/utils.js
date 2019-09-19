@@ -1,4 +1,6 @@
-import _ from 'lodash';
+import reduceRight from 'lodash/reduceRight';
+import has from 'lodash/has';
+import isEmpty from 'lodash/isEmpty';
 
 /**
  * Word count Utility
@@ -40,8 +42,8 @@ export function imageCount(html) {
 export function findKey(key /* ...objects... */) {
     let objects = Array.prototype.slice.call(arguments, 1);
 
-    return _.reduceRight(objects, function (result, object) {
-        if (object && _.has(object, key) && !_.isEmpty(object[key])) {
+    return reduceRight(objects, function (result, object) {
+        if (object && has(object, key) && !isEmpty(object[key])) {
             result = object[key];
         }
 

@@ -1,6 +1,6 @@
 import { helper } from '@ember/component/helper';
 import { wordCount, imageCount } from './utils';
-import _ from 'lodash';
+import isString from 'lodash/isString';
 
 export function readingTime([post], hash) {
   var html,
@@ -11,8 +11,8 @@ export function readingTime([post], hash) {
       readingTime,
       images,
       words,
-      minute = _.isString(hash.minute) ? hash.minute : '1 min read',
-      minutes = _.isString(hash.minutes) ? hash.minutes : '% min read';
+      minute = isString(hash.minute) ? hash.minute : '1 min read',
+      minutes = isString(hash.minutes) ? hash.minutes : '% min read';
 
   html = post.html;
   images = post.image ? 1 : 0;
