@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import { get, set, computed } from '@ember/object';
+import { set, computed } from '@ember/object';
 import layout from '../templates/components/floating-header';
 
 export default Component.extend({
@@ -10,7 +10,7 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    if(get(this, 'fastboot.isFastBoot')) {
+    if(this.fastboot.isFastBoot) {
       return;
     }
 
@@ -45,14 +45,14 @@ export default Component.extend({
   },
 
   didDestroyElement() {
-    let scrollEvent = this.get('scrollEvent');
+    let scrollEvent = this.scrollEvent;
 
     if(scrollEvent) {
       window.removeEventListener('scroll', scrollEvent);
       set(this, 'scrollEvent', null);
     }
 
-    let resizeEvent = this.get('resizeEvent');
+    let resizeEvent = this.resizeEvent;
 
     if(resizeEvent) {
       window.removeEventListener('resize', resizeEvent);

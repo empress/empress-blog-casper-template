@@ -10,7 +10,5 @@ export default Component.extend({
   router: service(),
   tagName: '',
 
-  isHome: computed('router.currentRouteName', function() {
-    return this.router.currentRouteName === 'index';
-  }),
+  isHome: computed.equal('router.currentRouteName', 'index'),
 });
