@@ -1,3 +1,7 @@
+3.2.1 / 2020-07-13
+==================
+
+  * start using empress-blueprint-helpers for config editing #31 from @mansona
 
 3.2.0 / 2020-06-04
 ==================
