@@ -1,3 +1,8 @@
+3.3.0 / 2020-08-13
+==================
+
+  * use empress-blog-ghost-helpers instead of shipping custom helpers #33 from @nickschot
+
 3.2.1 / 2020-07-13
 ==================
 
