@@ -36,6 +36,7 @@
     "ember-cli-htmlbars": "^4.3.1",
     "ember-cli-postcss": "^6.0.1",
     "ember-composable-helpers": "^4.1.1",
+    "ember-responsive-image": "^3.0.0",
     "empress-blog-ghost-helpers": "^1.0.0",
     "empress-blueprint-helpers": "^1.2.1",
     "postcss-color-function": "^4.1.0",
@@ -64,7 +65,6 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^8.0.0",
-    "ember-responsive-image": "^1.0.0-rc.7",
     "ember-source": "~3.18.0",
     "ember-source-channel-url": "^2.0.1",
     "ember-template-lint": "^2.6.0",
@@ -86,6 +86,7 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
+    "before": ["ember-responsive-image", "ember-cli-postcss"],
     "demoURL": "https://empress-blog-casper-template.netlify.com"
   }
 }
