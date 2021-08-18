@@ -1,5 +1,5 @@
 /* eslint-env node */
-const { applyConfig } = require('empress-blueprint-helpers');
+const { applyBuildConfig } = require('empress-blueprint-helpers');
 
 module.exports = {
   description: 'The default blueprint for empress-blog-casper-template.',
@@ -15,14 +15,23 @@ module.exports = {
       ]
     });
 
-    applyConfig(this.project, 'responsive-image', {
-      sourceDir: 'images',
-      destinationDir: 'responsive-images',
-      quality: 80,
-      supportedWidths: [2000, 1000, 600, 300],
-      removeSourceDir: false,
-      justCopy: false,
-      extensions: ['jpg', 'jpeg', 'png', 'gif'],
+    applyBuildConfig(this.project, 'responsive-image', {
+      fingerprint: false,
+      deviceWidths: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+      images: [
+        {
+          include: ['images/**/*'],
+          widths: [2000, 1000, 600, 300],
+          formats: ['jpg', 'jpeg', 'png'],
+          quality: 80,
+          lqip: {
+            type: 'inline',
+            targetPixels: 60,
+          },
+          removeSource: false,
+          justCopy: false,
+        }
+      ]
     });
   },
 };

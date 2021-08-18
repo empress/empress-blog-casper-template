@@ -9,18 +9,18 @@ into the {body} of the default.hbs template --}}
     </div>
 </header>
 
-{{#let model.post as |post|}}
+{{#let this.model.post as |post|}}
 
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
-        <article class="post-full {{post_class}} {{unless post.image 'no-image'}}">
+        <article class="post-full {{this.post_class}} {{unless post.image 'no-image'}}">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
                     <time class="post-full-meta-date" datetime="{{date post format="YYYY-MM-DD"}}">{{date post format="D MMMM YYYY"}}</time>
                     {{#if post.primaryTag}}
-                        <span class="date-divider">/</span> {{#link-to 'tag' post.primaryTag}}{{if post.primaryTag.name post.primaryTag.name post.primaryTag}}{{/link-to}}
+                        <span class="date-divider">/</span> <LinkTo @route="tag" @model={{post.primaryTag}}>{{if post.primaryTag.name post.primaryTag.name post.primaryTag}}</LinkTo>
                     {{/if}}
                 </section>
                 <h1 class="post-full-title">{{post.title}}</h1>
@@ -28,7 +28,7 @@ into the {body} of the default.hbs template --}}
 
             {{#if post.image}}
             <figure class="post-full-image">
-                <ResponsiveImage @image={{responsive-image-url post.image}} />
+                <ResponsiveImage @src={{post.image}} />
             </figure>
             {{/if}}
 
@@ -79,23 +79,29 @@ into the {body} of the default.hbs template --}}
         <div class="read-next-feed">
             {{#if post.primaryTag}}
                 {{#if this.relatedPosts}}
-                <article class="read-next-card" style={{tagBackgroundImageStyle}}>
+                <article class="read-next-card" style={{this.tagBackgroundImageStyle}}>
                     <header class="read-next-card-header">
-                        <small class="read-next-card-header-sitetitle">&mdash; {{blog.title}} &mdash;</small>
+                        <small class="read-next-card-header-sitetitle">&mdash; {{this.blog.title}} &mdash;</small>
 
-                        <h3 class="read-next-card-header-title"><a href="{{url}}">{{if post.primaryTag.name post.primaryTag.name post.primaryTag}}</a></h3>
+                        <h3 class="read-next-card-header-title"><a href="{{this.url}}">{{if post.primaryTag.name post.primaryTag.name post.primaryTag}}</a></h3>
 
                     </header>
-                    <div class="read-next-divider">{{svg-icons/infinity}}</div>
+                    <div class="read-next-divider"><SvgIcons::Infinity /></div>
                     <div class="read-next-card-content">
                         <ul>
-                            {{#each (take 3 relatedPosts) as |post|}}
-                            <li>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</li>
+                            {{#each (take 3 this.relatedPosts) as |post|}}
+                            <li>
+                              <LinkTo @route='post' @model={{post}}>
+                                {{post.title}}
+                              </LinkTo>
+                            </li>
                             {{/each}}
                         </ul>
                     </div>
                     <footer class="read-next-card-footer">
-                        {{#link-to 'tag' model.post.primaryTag}}{{plural relatedPosts.length empty='No posts' singular='% post' plural='See all % posts'}} →{{/link-to}}
+                      <LinkTo @route='tag' @model={{this.model.post.primaryTag}}>
+                        {{plural this.relatedPosts.length empty='No posts' singular='% post' plural='See all % posts'}} →
+                      </LinkTo>
                     </footer>
                 </article>
                 {{/if}}
@@ -115,6 +121,6 @@ into the {body} of the default.hbs template --}}
     </div>
 </aside>
 
-<FloatingHeader @post={{model.post}} />
+<FloatingHeader @post={{this.model.post}} />
 
 {{/let}}

@@ -26,18 +26,27 @@ module.exports = {
     postcssOptions
   },
 
-  // TODO get this to work properly and remove the need for the default blueprint
+  //TODO: Not sure if we need this anymore since this lives in ember-cli-build now
   config(env, config) {
     if(!config['responsive-image']) {
       return {
         'responsive-image': {
-          sourceDir: 'images',
-          destinationDir: 'responsive-images',
-          quality: 80,
-          supportedWidths: [2000, 1000, 600, 300],
-          removeSourceDir: false,
-          justCopy: false,
-          extensions: ['jpg', 'jpeg', 'png', 'gif']
+          fingerprint: false,
+          deviceWidths: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+          images: [
+            {
+              include: ['images/**/*'],
+              widths: [2000, 1000, 600, 300],
+              formats: ['jpg', 'jpeg', 'png'],
+              quality: 80,
+              lqip: {
+                type: 'inline',
+                targetPixels: 60,
+              },
+              removeSource: false,
+              justCopy: false,
+            }
+          ]
         }
       }
     }
