@@ -89,7 +89,7 @@ into the {body} of the default.hbs template --}}
                     <div class="read-next-divider">{{svg-icons/infinity}}</div>
                     <div class="read-next-card-content">
                         <ul>
-                            {{#each (take 3 this.relatedPosts) as |post|}}
+                            {{#each (take 3 relatedPosts) as |post|}}
                             <li>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</li>
                             {{/each}}
                         </ul>
