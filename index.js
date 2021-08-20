@@ -26,23 +26,6 @@ module.exports = {
     postcssOptions
   },
 
-  // TODO get this to work properly and remove the need for the default blueprint
-  config(env, config) {
-    if(!config['responsive-image']) {
-      return {
-        'responsive-image': {
-          sourceDir: 'images',
-          destinationDir: 'responsive-images',
-          quality: 80,
-          supportedWidths: [2000, 1000, 600, 300],
-          removeSourceDir: false,
-          justCopy: false,
-          extensions: ['jpg', 'jpeg', 'png', 'gif']
-        }
-      }
-    }
-  },
-
   included(app) {
     this._super.included.apply(this, arguments)
 
