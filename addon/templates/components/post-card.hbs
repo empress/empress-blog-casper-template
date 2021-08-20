@@ -1,14 +1,14 @@
-<article class="post-card {{this.post_class}} {{unless @post.image 'no-image'}} {{if (and this.isHome (has this.index index='nth:6')) 'post-card-large'}}">
+<article class="post-card {{post_class}} {{unless @post.image 'no-image'}} {{if (and isHome (has index index='nth:6')) 'post-card-large'}}">
 
     {{#if @post.image}}
-      <LinkTo @route='post' @model={{@post.id}} class="post-card-image-link">
+      {{#link-to 'post' @post.id class="post-card-image-link"}}
         <ResponsiveImage class="post-card-image" @src={{@post.image}} />
-      </LinkTo>
+      {{/link-to}}
     {{/if}}
 
     <div class="post-card-content">
 
-        <LinkTo @route='post' @model={{@post.id}} class="post-card-content-link">
+        {{#link-to 'post' @post.id class="post-card-content-link"}}
 
             <header class="post-card-header">
                 {{#if @post.primaryTag}}
@@ -21,7 +21,7 @@
                 <p>{{excerpt @post.html words="33"}}</p>
             </section>
 
-        </LinkTo>
+        {{/link-to}}
 
         <footer class="post-card-meta">
 
@@ -34,13 +34,11 @@
                     </div>
 
                     {{#if author.image}}
-                        <LinkTo @route='author' @model={{author}} class="static-avatar">
+                        {{#link-to 'author' author.id class="static-avatar"}}
                             <img class="author-profile-image" src={{author.image}} alt={{author.name}} />
-                        </LinkTo>
+                        {{/link-to}}
                     {{else}}
-                        <LinkTo @route='author' @model={{author}} class="static-avatar author-profile-image">
-                          <SvgIcons::Avatar />
-                        </LinkTo>
+                        {{#link-to 'author' author.id class="static-avatar author-profile-image"}}{{svg-icons/avatar}}{{/link-to}}
                     {{/if}}
                 </li>
             {{/each}}
