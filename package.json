@@ -23,7 +23,7 @@
     "build": "ember build --environment=production",
     "changelog": "auto-changelog --template changelog.template --unreleased-only --prepend --load-github-issue-data --github-cache-dir .changelog",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
-    "lint:js": "eslint ./*.js addon app blueprints config tests",
+    "lint:js": "eslint ./*.js addon app config tests",
     "start": "ember serve",
     "test": "npm-run-all lint:* test:*",
     "test:ember": "ember test",
