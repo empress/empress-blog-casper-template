@@ -4,6 +4,7 @@ image: /images/welcome.jpg
 imageMeta:
   attribution:
   attributionLink:
+  alt:
 featured: true
 authors:
   - ghost

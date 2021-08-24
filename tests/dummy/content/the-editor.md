@@ -4,6 +4,7 @@ image: /images/writing.jpg
 imageMeta:
   attribution:
   attributionLink:
+  alt:
 featured: true
 authors:
   - ghost

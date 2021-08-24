@@ -4,6 +4,7 @@ image: /images/design.jpg
 imageMeta:
   attribution:
   attributionLink:
+  alt:
 featured: true
 authors:
   - ghost

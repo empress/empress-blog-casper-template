@@ -4,6 +4,7 @@ image: /images/ember.jpg
 imageMeta:
   attribution: by Robert Wagner
   attributionLink: https://unsplash.com/photos/OM4TjQwHC1I
+  alt: Wooden desk with a laptop and a screen showing the Ship Shape Logo. The desk features several EmberJS mascot figurines and an Ember merchandise cup
 featured: true
 authors:
   - chris
