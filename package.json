@@ -101,7 +101,6 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "before": [
-      "ember-responsive-image",
       "ember-cli-postcss"
     ],
     "demoURL": "https://empress-blog-casper-template.netlify.com"

@@ -24,20 +24,19 @@ module.exports = {
   name: require('./package').name,
 
   options: {
-    postcssOptions
-  },
-
-  included() {
-    let app = findHost(this);
-
-    app.options['responsive-image'] = {
+    postcssOptions,
+    'responsive-image': {
       images: [{
         include: 'images/**/*',
         removeSource: false,
         quality: 80,
         widths: [2000, 1000, 600, 300],
       }]
-    };
+    }
+  },
+
+  included() {
+    let app = findHost(this);
 
     app.options.postcssOptions = postcssOptions;
 
