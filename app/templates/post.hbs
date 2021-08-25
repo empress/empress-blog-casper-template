@@ -28,7 +28,7 @@ into the {body} of the default.hbs template --}}
 
             {{#if post.image}}
             <figure class="post-full-image">
-                <ResponsiveImage @image={{responsive-image-url post.image}} />
+                <ResponsiveImage @src={{post.image}} />
             </figure>
             {{/if}}
 
