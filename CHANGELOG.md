@@ -1,3 +1,11 @@
+4.0.0 / 2021-08-25
+==================
+
+  * breaking: update with ember-cli-update and drop support for old Ember versions #44 from @mansona
+  * breaking: Move responsive image to dependencies #37 from @mansona
+  * Move to GitHub actions #43 from @mansona
+
+
 3.3.0 / 2020-08-13
 ==================
 
