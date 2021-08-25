@@ -1,3 +1,8 @@
+4.0.1 / 2021-08-25
+==================
+
+  * fix responsive-image config passthrough #45 from @mansona
+
 4.0.0 / 2021-08-25
 ==================
 
