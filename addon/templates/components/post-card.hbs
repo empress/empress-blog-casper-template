@@ -1,3 +1,4 @@
+{{! template-lint-disable no-curly-component-invocation no-implicit-this no-link-to-positional-params }}
 <article class="post-card {{post_class}} {{unless @post.image 'no-image'}} {{if (and isHome (has index index='nth:6')) 'post-card-large'}}">
 
     {{#if @post.image}}
