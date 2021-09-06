@@ -1,4 +1,4 @@
-{{! template-lint-disable no-curly-component-invocation no-forbidden-elements no-implicit-this }}
+{{! template-lint-disable no-curly-component-invocation no-forbidden-elements }}
 {{!--
 Wow what the hell is going on in here even?
 
@@ -12,11 +12,11 @@ for it, and apply those styles to the <header> tag. Else, we just output a <head
 with a `no-image` class so we can style it accordingly.
 --}}
 
-{{#if background}}
+{{#if @background}}
 
 <style type="text/css">
 .responsive-header-img {
-    background-image: url({{background}});
+    background-image: url({{@background}});
 }
 </style>
 {{/if}}

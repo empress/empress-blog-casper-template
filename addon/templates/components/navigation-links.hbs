@@ -1,6 +1,6 @@
-{{! template-lint-disable no-curly-component-invocation no-implicit-this no-link-to-positional-params no-nested-interactive }}
+{{! template-lint-disable no-curly-component-invocation no-link-to-positional-params no-nested-interactive }}
 <ul class="nav" role="menu">
-  {{#each blog.navigation as |navigation|}}
+  {{#each this.blog.navigation as |navigation|}}
     <li class="nav-{{navigation.label}}" role="menuitem">
       {{#if navigation.id}}
         {{#link-to navigation.route navigation.id}} {{navigation.label}} {{/link-to}}

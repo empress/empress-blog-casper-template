@@ -1,27 +1,27 @@
-{{! template-lint-disable no-curly-component-invocation no-implicit-this no-link-to-positional-params }}
-<div class="floating-header {{if floating 'floating-active'}}">
+{{! template-lint-disable no-curly-component-invocation no-link-to-positional-params }}
+<div class="floating-header {{if this.floating 'floating-active'}}">
     <div class="floating-header-logo">
         {{#link-to 'index'}}
-            {{#if blog.icon}}
-                <img src="{{blog.icon}}" alt="{{blog.title}} icon" />
+            {{#if this.blog.icon}}
+                <img src="{{this.blog.icon}}" alt="{{this.blog.title}} icon" />
             {{/if}}
-            <span>{{blog.title}}</span>
+            <span>{{this.blog.title}}</span>
         {{/link-to}}
     </div>
     <span class="floating-header-divider">&mdash;</span>
     <div class="floating-header-title">{{@post.title}}</div>
     <div class="floating-header-share">
-        <div class="floating-header-share-label">Share this {{svg-icons/point}}</div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode @post.title}}&amp;url={{encode location}}"
+        <div class="floating-header-share-label">Share this <SvgIcons::Point /></div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode @post.title}}&amp;url={{encode this.location}}"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
-            {{svg-icons/twitter}}
+            <SvgIcons::Twitter />
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{encode location}}"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{encode this.location}}"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
-            {{svg-icons/facebook}}
+            <SvgIcons::Facebook />
         </a>
     </div>
-    <progress id="reading-progress" class="progress" value={{value}} max={{max}}>
+    <progress id="reading-progress" class="progress" value={{this.value}} max={{this.max}}>
         <div class="progress-container">
             <span class="progress-bar"></span>
         </div>
