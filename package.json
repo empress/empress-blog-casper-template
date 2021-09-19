@@ -40,7 +40,7 @@
     "ember-cli-postcss": "^6.0.1",
     "ember-composable-helpers": "^4.1.1",
     "ember-responsive-image": "^3.1.1",
-    "empress-blog-ghost-helpers": "^1.0.0",
+    "empress-blog-ghost-helpers": "^1.1.0",
     "empress-blueprint-helpers": "^1.2.1",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^9.1.1",
