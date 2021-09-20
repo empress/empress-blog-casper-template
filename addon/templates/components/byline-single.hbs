@@ -1,9 +1,9 @@
-{{! template-lint-disable no-curly-component-invocation no-implicit-this no-invalid-link-text no-link-to-positional-params }}
+{{! template-lint-disable no-curly-component-invocation no-invalid-link-text no-link-to-positional-params }}
 <section class="author-card">
     {{#if @author.image}}
         <img class="author-profile-image" src={{@author.image}} alt={{@author.name}} />
     {{else}}
-        <span class="avatar-wrapper">{{svg-icons/avatar}}</span>
+        <span class="avatar-wrapper"><SvgIcons::Avatar /></span>
     {{/if}}
     <section class="author-card-content">
         <h4 class="author-card-name">{{#link-to 'author' @author.id}}{{@author.name}}{{/link-to}}</h4>

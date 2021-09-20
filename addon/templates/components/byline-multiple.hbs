@@ -1,4 +1,4 @@
-{{! template-lint-disable no-curly-component-invocation no-implicit-this no-link-to-positional-params }}
+{{! template-lint-disable no-curly-component-invocation no-link-to-positional-params }}
 <section class="post-full-authors">
 
     <div class="post-full-authors-content">
@@ -14,7 +14,7 @@
                     {{#if author.image}}
                         <img class="author-profile-image" src={{author.image}} alt={{author.name}} />
                     {{else}}
-                        <div class="author-profile-image">{{svg-icons/avatar}}</div>
+                        <div class="author-profile-image"><SvgIcons::Avatar /></div>
                     {{/if}}
                     <h2>{{author.name}}</h2>
                 </div>
@@ -33,7 +33,7 @@
                     <img class="author-profile-image" src={{author.image}} alt={{author.name}} />
                 {{/link-to}}
             {{else}}
-                {{#link-to 'author' author.id class="moving-avatar author-profile-image"}}{{svg-icons/avatar}}{{/link-to}}
+                {{#link-to 'author' author.id class="moving-avatar author-profile-image"}}<SvgIcons::Avatar />{{/link-to}}
             {{/if}}
 
         </li>
