@@ -1,3 +1,26 @@
+4.0.3 / 2021-09-20
+==================
+
+  * Bump empress-blog-ghost-helpers #48 from @elwayman02
+
+4.0.2 / 2021-09-19
+==================
+
+  * Bump ember-responsive-image #46 from @elwayman02
+
+4.0.1 / 2021-08-25
+==================
+
+  * fix responsive-image config passthrough #45 from @mansona
+
+4.0.0 / 2021-08-25
+==================
+
+  * breaking: update with ember-cli-update and drop support for old Ember versions #44 from @mansona
+  * breaking: Move responsive image to dependencies #37 from @mansona
+  * Move to GitHub actions #43 from @mansona
+
+
 3.3.0 / 2020-08-13
 ==================
 

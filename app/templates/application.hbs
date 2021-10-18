@@ -1,4 +1,5 @@
-{{head-layout}}
+{{! template-lint-disable link-rel-noopener no-curly-component-invocation no-forbidden-elements no-link-to-positional-params }}
+<HeadLayout />
 
 {{!-- Indententation is intentional to reduce diff from upstream --}}
     <div class="site-wrapper">
@@ -9,11 +10,11 @@
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href={{blog.url}}>{{blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <section class="copyright"><a href={{this.blog.url}}>{{this.blog.title}}</a> &copy; {{date format="YYYY"}}</section>
                 <nav class="site-footer-nav">
                     {{#link-to 'index'}}Latest Posts{{/link-to}}
-                    {{#if blog.facebook}}<a href="https://facebook.com/{{blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
-                    {{#if blog.twitter}}<a href="https://twitter.com/{{blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+                    {{#if this.blog.facebook}}<a href="https://facebook.com/{{this.blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
+                    {{#if this.blog.twitter}}<a href="https://twitter.com/{{this.blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
                     <a href="https://github.com/empress/empress-blog-casper-template" target="_blank" rel="noopener">empress-blog Casper Template</a>
                 </nav>
             </div>
@@ -36,6 +37,6 @@
     </div>
     {{/if}}
 
-    {{#if pagination.pages}}
+    {{!-- {{#if pagination.pages}}
     <script src="{{asset "built/infinitescroll.js"}}"></script>
-    {{/if}}
+    {{/if}} --}}

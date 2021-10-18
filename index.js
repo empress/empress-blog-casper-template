@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 'use strict';
 
 const autoprefixer = require('autoprefixer');
@@ -23,29 +24,39 @@ module.exports = {
   name: require('./package').name,
 
   options: {
-    postcssOptions
-  },
-
-  // TODO get this to work properly and remove the need for the default blueprint
-  config(env, config) {
-    if(!config['responsive-image']) {
-      return {
-        'responsive-image': {
-          sourceDir: 'images',
-          destinationDir: 'responsive-images',
-          quality: 80,
-          supportedWidths: [2000, 1000, 600, 300],
-          removeSourceDir: false,
-          justCopy: false,
-          extensions: ['jpg', 'jpeg', 'png', 'gif']
-        }
-      }
+    postcssOptions,
+    'responsive-image': {
+      images: [{
+        include: 'images/**/*',
+        removeSource: false,
+        quality: 80,
+        widths: [2000, 1000, 600, 300],
+      }]
     }
   },
 
-  included(app) {
-    this._super.included.apply(this, arguments)
+  included() {
+    let app = findHost(this);
 
     app.options.postcssOptions = postcssOptions;
+
+    this._super.included.apply(this, arguments);
+  },
+
+  contentFor() {
+    let responsiveImage = this.addons.find((a) => a.name === 'ember-responsive-image');
+    return responsiveImage.contentFor(...arguments);
   },
 };
+
+// Polyfill [Addon._findHost](https://ember-cli.com/api/classes/Addon.html#method__findHost) for older versions of ember-cli
+function findHost(addon) {
+  var current = addon;
+  var app;
+
+  do {
+    app = current.app || app;
+  } while (current.parent.parent && (current = current.parent));
+
+  return app;
+}

@@ -1,3 +1,4 @@
+{{! template-lint-disable no-duplicate-landmark-elements }}
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
@@ -10,12 +11,12 @@ into the {body} of the default.hbs template --}}
 </header>
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
-{{#let model as |post|}}
+{{#let @model as |post|}}
 
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
-        <article class="post-full {{post_class}} {{unless post.image 'no-image'}}">
+        <article class="post-full {{unless post.image 'no-image'}}">
 
             <header class="post-full-header">
                 <h1 class="post-full-title">{{post.title}}</h1>
@@ -23,7 +24,7 @@ into the {body} of the default.hbs template --}}
 
             {{#if post.image}}
             <figure class="post-full-image">
-                <ResponsiveImage @image={{responsive-image-url post.image}} />
+                <ResponsiveImage @src={{post.image}} />
             </figure>
             {{/if}}
 

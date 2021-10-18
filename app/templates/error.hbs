@@ -1,12 +1,13 @@
+{{! template-lint-disable no-curly-component-invocation no-link-to-positional-params no-log }}
     <div class="site-wrapper">
 
-        <Header @background={{blog.coverImage}}>
+        <Header @background={{this.blog.coverImage}}>
             <div class="inner">
                 <nav class="site-nav-center">
-                    {{#if blog.logo}}
-                        {{#link-to 'index' class="site-nav-logo"}}<img src={{blog.logo}} alt={{blog.title}} />{{/link-to}}
+                    {{#if this.blog.logo}}
+                        {{#link-to 'index' class="site-nav-logo"}}<img src={{this.blog.logo}} alt={{this.blog.title}} />{{/link-to}}
                     {{else}}
-                        {{#link-to 'index' class="site-nav-logo"}}{{blog.title}}{{/link-to}}
+                        {{#link-to 'index' class="site-nav-logo"}}{{this.blog.title}}{{/link-to}}
                     {{/if}}
                 </nav>
             </div>
@@ -16,9 +17,8 @@
             <div class="inner">
 
                 <section class="error-message">
-                    {{log error}}
-                    <h1 class="error-code">{{error.status}}</h1>
-                    <p class="error-description">{{error.title}}</p>
+                    <h1 class="error-code">{{this.error.status}}</h1>
+                    <p class="error-description">{{this.error.title}}</p>
                     {{#link-to 'index' class="error-link"}}Go to the front page →{{/link-to}}
                 </section>
             </div>
