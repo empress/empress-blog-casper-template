@@ -6,14 +6,14 @@
         <span class="avatar-wrapper"><SvgIcons::Avatar /></span>
     {{/if}}
     <section class="author-card-content">
-        <h4 class="author-card-name">{{#link-to 'author' @author.id}}{{@author.name}}{{/link-to}}</h4>
+        <h4 class="author-card-name"><LinkTo @route="author" @model={{@author.id}}>{{@author.name}}</LinkTo></h4>
         {{#if @author.content}}
             <p>{{@author.content}}</p>
         {{else}}
-            <p>Read {{#link-to 'author' @author.id}}more posts{{/link-to}} by this author.</p>
+            <p>Read <LinkTo @route="author" @model={{@author.id}}>more posts</LinkTo> by this author.</p>
         {{/if}}
     </section>
 </section>
 <div class="post-full-footer-right">
-    {{#link-to 'author' @author.id class="author-card-button"}}Read More{{/link-to}}
+    <LinkTo @route="author" @model={{@author.id}} class="author-card-button">Read More</LinkTo>
 </div>

@@ -1,12 +1,12 @@
 {{! template-lint-disable no-curly-component-invocation no-link-to-positional-params }}
 <div class="floating-header {{if this.floating 'floating-active'}}">
     <div class="floating-header-logo">
-        {{#link-to 'index'}}
+        <LinkTo @route="index">
             {{#if this.blog.icon}}
                 <img src="{{this.blog.icon}}" alt="{{this.blog.title}} icon" />
             {{/if}}
             <span>{{this.blog.title}}</span>
-        {{/link-to}}
+        </LinkTo>
     </div>
     <span class="floating-header-divider">&mdash;</span>
     <div class="floating-header-title">{{@post.title}}</div>

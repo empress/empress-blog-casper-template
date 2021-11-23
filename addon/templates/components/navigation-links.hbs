@@ -3,9 +3,9 @@
   {{#each this.blog.navigation as |navigation|}}
     <li class="nav-{{navigation.label}}" role="menuitem">
       {{#if navigation.id}}
-        {{#link-to navigation.route navigation.id}} {{navigation.label}} {{/link-to}}
+        <LinkTo @route={{navigation.route}} @model={{navigation.id}}> {{navigation.label}} </LinkTo>
       {{else if navigation.route}}
-        {{#link-to navigation.route}} {{navigation.label}} {{/link-to}}
+        <LinkTo @route={{navigation.route}}> {{navigation.label}} </LinkTo>
       {{else if navigation.link}}
         <a href="{{navigation.link}}"> {{navigation.label}} </a>
       {{/if}}
