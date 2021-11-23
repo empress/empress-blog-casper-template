@@ -1,3 +1,8 @@
+4.2.0 / 2021-11-23
+==================
+
+  * Update with ember-cli-update and remove deprecations #49 from @mansona
+
 4.1.0 / 2021-11-23
 ==================
 
