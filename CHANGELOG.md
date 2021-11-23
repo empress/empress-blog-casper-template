@@ -1,3 +1,8 @@
+4.1.0 / 2021-11-23
+==================
+
+  * Fix most deprecations and add ember-try test for no-deprecations #47 from @mansona
+
 4.0.3 / 2021-09-20
 ==================
 
