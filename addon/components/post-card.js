@@ -1,6 +1,6 @@
 /* eslint-disable ember/no-classic-components, ember/no-classic-classes */
 import Component from '@ember/component';
-import { computed } from '@ember/object';
+import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
 import layout from '../templates/components/post-card';
@@ -11,5 +11,5 @@ export default Component.extend({
   router: service(),
   tagName: '',
 
-  isHome: computed.equal('router.currentRouteName', 'index'),
+  isHome: equal('router.currentRouteName', 'index'),
 });
