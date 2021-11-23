@@ -55,7 +55,7 @@
     "auto-changelog": "https://git@github.com/mansona/auto-changelog.git#epic",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
-    "ember-auto-import": "^1.11.3",
+    "ember-auto-import": "^2.2.4",
     "ember-cli": "~3.28.4",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-fastboot": "^3.2.0-beta.4",
@@ -90,7 +90,8 @@
     "prember": "^1.0.4",
     "prettier": "^2.3.2",
     "qunit": "^2.16.0",
-    "qunit-dom": "^1.6.0"
+    "qunit-dom": "^1.6.0",
+    "webpack": "^5.52.1"
   },
   "engines": {
     "node": "12.* || 14.* || >= 16"
