@@ -21,19 +21,19 @@
                 <div class="bio">
                     {{#if author.content}}
                         <p>{{author.content}}</p>
-                        <p>{{#link-to 'author' author.id}}More posts{{/link-to}} by {{author.name}}.</p>
+                        <p><LinkTo @route="author" @model={{author.id}}>More posts</LinkTo> by {{author.name}}.</p>
                     {{else}}
-                        <p>Read {{#link-to 'author' author.id}}more posts{{/link-to}} by this author.</p>
+                        <p>Read <LinkTo @route="author" @model={{author.id}}>more posts</LinkTo> by this author.</p>
                     {{/if}}
                 </div>
             </div>
 
             {{#if author.image}}
-                {{#link-to 'author' author.id class="moving-avatar"}}
+                <LinkTo @route="author" @model={{author.id}} class="moving-avatar">
                     <img class="author-profile-image" src={{author.image}} alt={{author.name}} />
-                {{/link-to}}
+                </LinkTo>
             {{else}}
-                {{#link-to 'author' author.id class="moving-avatar author-profile-image"}}<SvgIcons::Avatar />{{/link-to}}
+                <LinkTo @route="author" @model={{author.id}} class="moving-avatar author-profile-image"><SvgIcons::Avatar /></LinkTo>
             {{/if}}
 
         </li>

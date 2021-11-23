@@ -3,9 +3,9 @@
     <div class="site-nav-left">
         {{#unless this.isHome}}
             {{#if this.blog.logo}}
-                {{#link-to 'index' class="site-nav-logo"}}<img src={{this.blog.logo}} alt={{this.blog.title}} />{{/link-to}}
+                <LinkTo @route="index" class="site-nav-logo"><img src={{this.blog.logo}} alt={{this.blog.title}} /></LinkTo>
             {{else}}
-                {{#link-to 'index' class="site-nav-logo"}}{{this.blog.title}}{{/link-to}}
+                <LinkTo @route="index" class="site-nav-logo">{{this.blog.title}}</LinkTo>
             {{/if}}
         {{/unless}}
         {{#if this.blog.navigation}}
