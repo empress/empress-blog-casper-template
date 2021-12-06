@@ -5,9 +5,9 @@
             <div class="inner">
                 <nav class="site-nav-center">
                     {{#if this.blog.logo}}
-                        {{#link-to 'index' class="site-nav-logo"}}<img src={{this.blog.logo}} alt={{this.blog.title}} />{{/link-to}}
+                        <LinkTo @route="index" class="site-nav-logo"><img src={{this.blog.logo}} alt={{this.blog.title}} /></LinkTo>
                     {{else}}
-                        {{#link-to 'index' class="site-nav-logo"}}{{this.blog.title}}{{/link-to}}
+                        <LinkTo @route="index" class="site-nav-logo">{{this.blog.title}}</LinkTo>
                     {{/if}}
                 </nav>
             </div>
@@ -19,7 +19,7 @@
                 <section class="error-message">
                     <h1 class="error-code">{{this.error.status}}</h1>
                     <p class="error-description">{{this.error.title}}</p>
-                    {{#link-to 'index' class="error-link"}}Go to the front page →{{/link-to}}
+                    <LinkTo @route="index" class="error-link">Go to the front page →</LinkTo>
                 </section>
             </div>
         </main>

@@ -12,7 +12,7 @@
             <div class="site-footer-content inner">
                 <section class="copyright"><a href={{this.blog.url}}>{{this.blog.title}}</a> &copy; {{date format="YYYY"}}</section>
                 <nav class="site-footer-nav">
-                    {{#link-to 'index'}}Latest Posts{{/link-to}}
+                    <LinkTo @route="index">Latest Posts</LinkTo>
                     {{#if this.blog.facebook}}<a href="https://facebook.com/{{this.blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
                     {{#if this.blog.twitter}}<a href="https://twitter.com/{{this.blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
                     <a href="https://github.com/empress/empress-blog-casper-template" target="_blank" rel="noopener">empress-blog Casper Template</a>
