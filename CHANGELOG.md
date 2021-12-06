@@ -1,3 +1,8 @@
+4.3.0 / 2021-12-06
+==================
+
+  * remove {{link-to}} calls using positional arguments #50 from @mansona
+
 4.2.0 / 2021-11-23
 ==================
 
