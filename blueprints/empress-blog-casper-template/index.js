@@ -11,7 +11,7 @@ module.exports = {
   async afterInstall() {
     await this.addAddonsToProject({
       packages: [
-        'ember-responsive-image',
+        'ember-responsive-image@1',
       ]
     });
 
