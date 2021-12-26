@@ -24,6 +24,7 @@
     "changelog": "auto-changelog --template changelog.template --unreleased-only --prepend --load-github-issue-data --github-cache-dir .changelog",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
+    "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
