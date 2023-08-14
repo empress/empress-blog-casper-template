@@ -9,7 +9,7 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: 12
+  NODE_VERSION: 16
   FORCE_COLOR: 1
 
 jobs:
@@ -21,7 +21,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - run: npm i -g npm@7
       - run: npm ci
       - run: npm run lint
 
@@ -33,7 +32,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - run: npm i -g npm@7
       - run: npm install --no-package-lock
       - run: npm run test:ember
 
@@ -46,7 +44,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - run: npm i -g npm@7
       - run: npm ci
       - run: npm run test:ember
 
@@ -76,7 +73,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - run: npm i -g npm@7
       - run: npm ci
       - name: test
         run: node_modules/.bin/ember try:one ${{ matrix.ember-try-scenario }} --skip-cleanup
