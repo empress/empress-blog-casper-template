@@ -622,6 +622,10 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card-large .post-card-content {
         flex: 0 1 357px;
     }
+  
+    .post-card-large.no-image .post-card-content {
+      flex: 1;
+    }
 
     .post-card-large h2 {
         font-size: 2.6rem;
