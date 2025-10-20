@@ -3,14 +3,20 @@ name: CI
 on:
   push:
     branches:
-      - master
       - main
-  pull_request:
+      - master
+  pull_request: {}
+
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lint:
-    name: Linting
+    name: "Linting"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -19,11 +25,28 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install
-      - run: npm run lint
+      - run: pnpm run lint
 
-  floating-dependencies:
-    name: Floating Dependencies
+  test:
+    name: "Tests"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm run test:ember
+
+  floating:
+    name: "Floating Dependencies"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -34,40 +57,29 @@ jobs:
       - run: pnpm install --no-lockfile
       - run: pnpm run test:ember
 
-  test:
-    name: Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
-      - run: pnpm install
-      - run: pnpm run test:ember
-
   try-scenarios:
-    name: "ember-try: ${{ matrix.ember-try-scenario }}"
+    name: ${{ matrix.try-scenario }}
     runs-on: ubuntu-latest
-    timeout-minutes: 7
-    needs: test
+    needs: "test"
+    timeout-minutes: 10
 
     strategy:
       fail-fast: false
       matrix:
-        ember-try-scenario:
-          - 'ember-lts-3.20'
-          - 'ember-lts-3.24'
-          - 'ember-release'
-          - 'ember-beta'
-          - 'ember-canary'
-          - 'ember-default-with-jquery'
-          - 'ember-classic'
-          - 'embroider-safe'
-          - 'embroider-optimized'
-          - 'no-deprecations'
-          - 'ember-release-no-deprecations'
+        try-scenario:
+          - ember-lts-3.20
+          - ember-lts-3.24
+          - ember-lts-3.28
+          - ember-lts-4.4
+          - ember-lts-4.8
+          - ember-release
+          - ember-beta
+          - ember-canary
+          - embroider-safe
+          - embroider-optimized
+          - no-deprecations
+          - ember-release-no-deprecations
+
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -76,5 +88,5 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install
-      - name: test
-        run: pnpm ember try:one ${{ matrix.ember-try-scenario }} --skip-cleanup
+      - name: Run Tests
+        run: pnpm ember try:one ${{ matrix.try-scenario }}
