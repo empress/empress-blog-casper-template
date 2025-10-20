@@ -5,47 +5,47 @@ on:
     branches:
       - master
       - main
-      - "v*"
   pull_request:
-
-env:
-  NODE_VERSION: 16
-  FORCE_COLOR: 1
 
 jobs:
   lint:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-      - run: npm ci
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install
       - run: npm run lint
 
   floating-dependencies:
     name: Floating Dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-      - run: npm install --no-package-lock
-      - run: npm run test:ember
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --no-lockfile
+      - run: pnpm run test:ember
 
   test:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: mansona/npm-lockfile-version@v1
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-      - run: npm ci
-      - run: npm run test:ember
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm run test:ember
 
   try-scenarios:
     name: "ember-try: ${{ matrix.ember-try-scenario }}"
@@ -69,10 +69,12 @@ jobs:
           - 'no-deprecations'
           - 'ember-release-no-deprecations'
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-      - run: npm ci
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install
       - name: test
-        run: node_modules/.bin/ember try:one ${{ matrix.ember-try-scenario }} --skip-cleanup
+        run: pnpm ember try:one ${{ matrix.ember-try-scenario }} --skip-cleanup

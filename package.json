@@ -52,7 +52,6 @@
     "@embroider/test-setup": "^0.43.5",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
-    "auto-changelog": "https://git@github.com/mansona/auto-changelog.git#epic",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.2.4",
@@ -74,7 +73,7 @@
     "ember-source": "~3.28.0",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^3.6.0",
-    "ember-try": "^1.4.0",
+    "ember-try": "^4.0.0",
     "empress-blog": "^3.4.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -105,5 +104,6 @@
       "ember-cli-postcss"
     ],
     "demoURL": "https://empress-blog-casper-template.netlify.com"
-  }
+  },
+  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd"
 }
