@@ -12,6 +12,8 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.20.0',
+            'ember-data': '~3.20.0',
+            'ember-qunit': '^5.0.0',
           },
         },
       },
@@ -20,6 +22,8 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.24.0',
+            'ember-data': '~3.24.0',
+            'ember-qunit': '^5.0.0',
           },
         },
       },
@@ -28,6 +32,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.28.0',
+            'ember-data': '~3.28.0',
           },
         },
       },
@@ -36,6 +41,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.4.0',
+            'ember-data': '~4.4.0',
           },
         },
       },
@@ -44,6 +50,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.8.0',
+            'ember-data': '~4.8.0',
           },
         },
       },
