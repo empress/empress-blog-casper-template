@@ -69,6 +69,7 @@
     "ember-cli-terser": "^4.0.2",
     "ember-data": "~4.12.8",
     "ember-fetch": "^8.0.1",
+    "ember-inflector": "^6.0.0",
     "ember-load-initializers": "^2.1.2",
     "ember-page-title": "^8.2.3",
     "ember-qunit": "^8.1.0",
