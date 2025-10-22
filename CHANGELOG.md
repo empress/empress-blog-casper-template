@@ -2,6 +2,17 @@
 
 ## Release (2025-10-22)
 
+* empress-blog-casper-template 5.0.1 (patch)
+
+#### :bug: Bug Fix
+* `empress-blog-casper-template`
+  * [#68](https://github.com/empress/empress-blog-casper-template/pull/68) add missing peer for empress-blog ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2025-10-22)
+
 * empress-blog-casper-template 5.0.0 (major)
 
 #### :boom: Breaking Change
