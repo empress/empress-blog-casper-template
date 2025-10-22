@@ -7,10 +7,7 @@ import Avatar from './svg-icons/avatar';
 import excerpt from 'empress-blog/helpers/excerpt';
 import readingTime from 'empress-blog-ghost-helpers/helpers/reading-time';
 import has from 'empress-blog-ghost-helpers/helpers/has';
-
-function and(a, b) {
-  return a && b;
-}
+import and from 'ember-truth-helpers/helpers/and';
 
 export default class PostCard extends Component {
   @service router;
