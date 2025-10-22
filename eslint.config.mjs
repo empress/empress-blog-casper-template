@@ -59,7 +59,7 @@ export default [
       parser: babelParser,
       parserOptions: {
         requireConfigFile: false,
-      }
+      },
     },
   },
   {

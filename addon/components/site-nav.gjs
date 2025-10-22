@@ -43,7 +43,8 @@ export default class SiteNav extends Component {
               class="social-link social-link-fb"
               href="https://www.facebook.com/{{this.blog.facebook}}"
               title="Facebook"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Facebook />
             </a>
@@ -53,7 +54,8 @@ export default class SiteNav extends Component {
               class="social-link social-link-tw"
               href="https://twitter.com/{{this.blog.twitter}}"
               title="Twitter"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Twitter />
             </a>
@@ -65,7 +67,8 @@ export default class SiteNav extends Component {
           <a
             class="rss-button"
             href={{this.rssFeed}}
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Rss />
           </a>
