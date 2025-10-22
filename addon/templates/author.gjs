@@ -1,5 +1,4 @@
 import RouteTemplate from 'ember-route-template';
-import { LinkTo } from '@ember/routing';
 
 import Header from '../components/header';
 import SiteNav from '../components/site-nav';
@@ -10,7 +9,6 @@ import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
 import Website from '../components/svg-icons/website';
 import Twitter from '../components/svg-icons/twitter';
 import Facebook from '../components/svg-icons/facebook';
-import Rss from '../components/svg-icons/rss';
 
 export default RouteTemplate(
   <template>

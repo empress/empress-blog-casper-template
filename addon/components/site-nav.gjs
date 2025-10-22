@@ -1,4 +1,4 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { LinkTo } from '@ember/routing';
 import NavigationLinks from './navigation-links';
@@ -43,8 +43,7 @@ export default class SiteNav extends Component {
               class="social-link social-link-fb"
               href="https://www.facebook.com/{{this.blog.facebook}}"
               title="Facebook"
-              target="_blank"
-              rel="noopener"
+              target="_blank" rel="noopener noreferrer"
             >
               <Facebook />
             </a>
@@ -54,8 +53,7 @@ export default class SiteNav extends Component {
               class="social-link social-link-tw"
               href="https://twitter.com/{{this.blog.twitter}}"
               title="Twitter"
-              target="_blank"
-              rel="noopener"
+              target="_blank" rel="noopener noreferrer"
             >
               <Twitter />
             </a>
@@ -67,8 +65,7 @@ export default class SiteNav extends Component {
           <a
             class="rss-button"
             href={{this.rssFeed}}
-            target="_blank"
-            rel="noopener"
+            target="_blank" rel="noopener noreferrer"
           >
             <Rss />
           </a>

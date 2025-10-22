@@ -1,9 +1,11 @@
 import RouteTemplate from 'ember-route-template';
 import { LinkTo } from '@ember/routing';
 import Header from '../components/header';
-import PostCard from '../components/post-card';
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
+
+// import PostCard from '../components/post-card';
+// import get from '@nullvoxpopuli/ember-composible-helpers';
 
 class ErrorRouteComponent extends Component {
   @service blog;
@@ -54,7 +56,7 @@ class ErrorRouteComponent extends Component {
                 </div>
             </div>
         </aside>
-        {{/get}} --}}
+      {{/get}} --}}
 
     </div>
   </template>

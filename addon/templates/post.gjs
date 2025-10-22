@@ -1,6 +1,5 @@
 import RouteTemplate from 'ember-route-template';
 
-import HeadLayout from 'ember-cli-head/components/head-layout';
 import { LinkTo } from '@ember/routing';
 import date from 'empress-blog-ghost-helpers/helpers/date';
 import markdownToHtml from 'ember-cli-showdown/components/markdown-to-html';

@@ -7,6 +7,7 @@ export default class NavigationLinks extends Component {
   @service blog;
 
   <template>
+    {{! template-lint-disable no-nested-interactive }}
     <ul class="nav" role="menu">
       {{#each this.blog.navigation as |navigation|}}
         <li class="nav-{{navigation.label}}" role="menuitem">

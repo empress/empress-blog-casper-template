@@ -1,5 +1,4 @@
 import RouteTemplate from 'ember-route-template';
-import { LinkTo } from '@ember/routing';
 
 import Header from '../components/header';
 import SiteNav from '../components/site-nav';

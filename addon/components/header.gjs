@@ -1,4 +1,5 @@
 <template>
+  {{! template-lint-disable no-forbidden-elements }}
   <header
     class="site-header outer
       {{if @background 'responsive-header-img' 'no-image'}}"
