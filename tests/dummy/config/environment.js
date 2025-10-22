@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 'use strict';
 
 module.exports = function (environment) {
@@ -21,19 +20,22 @@ module.exports = function (environment) {
     },
 
     blog: {
-      title: "empress-blog casper template",
-      description: "The Casper theme for empress-blog",
+      title: 'empress-blog casper template',
+      description: 'The Casper theme for empress-blog',
       coverImage: '/images/blog-cover.jpg',
 
-      navigation: [{
-        label: 'Home',
-        route: 'index'
-      }, {
-        label: 'Built by Chris Manson',
-        route: 'page',
-        id: 'chris-manson'
-      }]
-    }
+      navigation: [
+        {
+          label: 'Home',
+          route: 'index',
+        },
+        {
+          label: 'Built by Chris Manson',
+          route: 'page',
+          id: 'chris-manson',
+        },
+      ],
+    },
   };
 
   if (environment === 'development') {

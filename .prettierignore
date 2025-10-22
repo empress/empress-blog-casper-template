@@ -8,6 +8,17 @@
 /coverage/
 !.*
 .*/
+/pnpm-lock.yaml
+ember-cli-update.json
+*.html
 
 # ember-try
 /.node_modules.ember-try/
+
+CHANGELOG.md
+
+# TODO remove this in a different PR
+addon/styles/*.css
+
+# empress blog content
+tests/dummy/**/*.md

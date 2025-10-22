@@ -33,4 +33,4 @@ ember install empress-blog empress-blog-casper-template
 It will ask you if you want to update the `index.html` file and you should say yes 👍
 
 If you want to see the blog system running on your local machine just run `npm start` and you will
-be able to navigate to  [http://localhost:4200](http://localhost:4200) to see the blog in action.
+be able to navigate to [http://localhost:4200](http://localhost:4200) to see the blog in action.

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 'use strict';
 
 const browsers = [
@@ -9,5 +8,5 @@ const browsers = [
 
 module.exports = {
   browsers,
-  node: "current",
+  node: 'current',
 };
