@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 'use strict';
 
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
@@ -6,7 +5,7 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 module.exports = function (defaults) {
   const app = new EmberAddon(defaults, {
     fingerprint: {
-      extensions: ['js', 'css', 'map']
+      extensions: ['js', 'css', 'map'],
     },
   });
 

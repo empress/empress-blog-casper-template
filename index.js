@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 'use strict';
 
 const autoprefixer = require('autoprefixer');
@@ -14,10 +13,13 @@ const postcssOptions = {
       { module: easyImport },
       { module: customProperties, options: { preserve: false } },
       { module: colorFunction },
-      { module: autoprefixer, options: { overrideBrowserslist: ['last 2 versions'] } },
+      {
+        module: autoprefixer,
+        options: { overrideBrowserslist: ['last 2 versions'] },
+      },
       { module: cssnano },
-    ]
-  }
+    ],
+  },
 };
 
 module.exports = {
@@ -26,13 +28,15 @@ module.exports = {
   options: {
     postcssOptions,
     'responsive-image': {
-      images: [{
-        include: 'images/**/*',
-        removeSource: false,
-        quality: 80,
-        widths: [2000, 1000, 600, 300],
-      }]
-    }
+      images: [
+        {
+          include: 'images/**/*',
+          removeSource: false,
+          quality: 80,
+          widths: [2000, 1000, 600, 300],
+        },
+      ],
+    },
   },
 
   included() {
@@ -44,7 +48,9 @@ module.exports = {
   },
 
   contentFor() {
-    let responsiveImage = this.addons.find((a) => a.name === 'ember-responsive-image');
+    let responsiveImage = this.addons.find(
+      (a) => a.name === 'ember-responsive-image',
+    );
     return responsiveImage.contentFor(...arguments);
   },
 };
