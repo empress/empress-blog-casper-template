@@ -1,5 +1,29 @@
 # Changelog
 
+## Release (2025-10-22)
+
+* empress-blog-casper-template 5.0.0 (major)
+
+#### :boom: Breaking Change
+* `empress-blog-casper-template`
+  * [#63](https://github.com/empress/empress-blog-casper-template/pull/63) drop support for ember < 3.28 ([@mansona](https://github.com/mansona))
+  * [#58](https://github.com/empress/empress-blog-casper-template/pull/58) drop support for node < 20 and swap to pnpm ([@mansona](https://github.com/mansona))
+  * [#57](https://github.com/empress/empress-blog-casper-template/pull/57) Breaking: Drop support for Node < 16 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :rocket: Enhancement
+* `empress-blog-casper-template`
+  * [#64](https://github.com/empress/empress-blog-casper-template/pull/64) Convert everything to GJS ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `empress-blog-casper-template`
+  * [#62](https://github.com/empress/empress-blog-casper-template/pull/62) update to v5.12.0 with ember-cli-update ([@mansona](https://github.com/mansona))
+  * [#61](https://github.com/empress/empress-blog-casper-template/pull/61) update to v4.12 with ember-cli-update ([@mansona](https://github.com/mansona))
+  * [#59](https://github.com/empress/empress-blog-casper-template/pull/59) start using release-plan ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 4.3.0 / 2021-12-06
 ==================
 
