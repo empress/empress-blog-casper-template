@@ -4,7 +4,7 @@ import { LinkTo } from '@ember/routing';
 import ResponsiveImage from 'ember-responsive-image/components/responsive-image';
 import Avatar from './svg-icons/avatar';
 
-import excerpt from 'empress-blog/helpers/excerpt';
+import excerpt from '../helpers/excerpt';
 import readingTime from 'empress-blog-ghost-helpers/helpers/reading-time';
 import has from 'empress-blog-ghost-helpers/helpers/has';
 import and from 'ember-truth-helpers/helpers/and';
