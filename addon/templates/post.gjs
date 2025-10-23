@@ -12,6 +12,7 @@ import PostCard from '../components/post-card';
 import FloatingHeader from '../components/floating-header';
 import gt from 'empress-blog-ghost-helpers/helpers/gt';
 import { take } from '@nullvoxpopuli/ember-composable-helpers';
+import { get } from '@ember/helper';
 
 export default RouteTemplate(
   <template>
@@ -63,9 +64,7 @@ into the {body} of the default.hbs template }}
             {{/if}}
 
             <section class="post-full-content">
-
               <MarkdownToHtml @markdown={{post.content}} class="post-content" />
-
             </section>
 
             {{! Email subscribe form at the bottom of the page }}
@@ -88,7 +87,13 @@ into the {body} of the default.hbs template }}
               {{#if (gt post.authors.length 1)}}
                 <BylineMultiple @authors={{post.authors}} />
               {{else}}
-                <BylineSingle @author={{post.authors.firstObject}} />
+                <BylineSingle
+                  @author={{if
+                    (get post.authors "0")
+                    (get post.authors "0")
+                    post.authors.firstObject
+                  }}
+                />
               {{/if}}
 
             </footer>
