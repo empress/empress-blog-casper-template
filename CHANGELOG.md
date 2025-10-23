@@ -2,6 +2,17 @@
 
 ## Release (2025-10-23)
 
+* empress-blog-casper-template 5.0.3 (patch)
+
+#### :bug: Bug Fix
+* `empress-blog-casper-template`
+  * [#72](https://github.com/empress/empress-blog-casper-template/pull/72) add ember-cli-showdown dependency ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2025-10-23)
+
 * empress-blog-casper-template 5.0.2 (patch)
 
 #### :house: Internal
