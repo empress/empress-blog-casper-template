@@ -4,7 +4,7 @@ import Header from '../components/header';
 import SiteNav from '../components/site-nav';
 import PostCard from '../components/post-card';
 import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
-import markdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
+import MarkdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
 import plural from 'empress-blog-ghost-helpers/helpers/plural';
 
 export default RouteTemplate(
@@ -22,7 +22,7 @@ export default RouteTemplate(
           <h1 class="site-title">{{if @model.name @model.name @model.tag}}</h1>
           <h2 class="site-description">
             {{#if @model.content}}
-              {{markdownToHtml @model.content tagName=""}}
+              <MarkdownToHtml @markdown={{@model.content}} />
             {{else}}
               A collection of
               {{plural
