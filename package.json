@@ -54,9 +54,6 @@
     "postcss-custom-properties": "^9.1.1",
     "postcss-easy-import": "^3.0.0"
   },
-  "peerDependencies": {
-    "empress-blog": "*"
-  },
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.1",
     "@babel/plugin-proposal-decorators": "^7.24.7",
