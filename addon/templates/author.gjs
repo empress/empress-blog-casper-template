@@ -3,7 +3,7 @@ import RouteTemplate from 'ember-route-template';
 import Header from '../components/header';
 import SiteNav from '../components/site-nav';
 import PostCard from '../components/post-card';
-import markdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
+import MarkdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
 import plural from 'empress-blog-ghost-helpers/helpers/plural';
 import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
 import Website from '../components/svg-icons/website';
@@ -39,7 +39,7 @@ export default RouteTemplate(
             <h1 class="site-title">{{author.name}}</h1>
             {{#if author.content}}
               <h2 class="author-bio">
-                {{markdownToHtml author.content tagName=""}}
+                <MarkdownToHtml @markdown={{author.content}} />
               </h2>
             {{/if}}
             <div class="author-meta">

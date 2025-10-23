@@ -35,6 +35,9 @@ importers:
       ember-cli-postcss:
         specifier: ^6.0.1
         version: 6.0.2
+      ember-cli-showdown:
+        specifier: ^9.0.2
+        version: 9.0.2(webpack@5.102.1)
       ember-responsive-image:
         specifier: ^3.1.1
         version: 3.4.0(@babel/core@7.28.4)(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.28.4))(rsvp@4.8.5)(webpack@5.102.1))(webpack@5.102.1)
@@ -3629,6 +3632,10 @@ packages:
   ember-cli-showdown@6.0.1:
     resolution: {integrity: sha512-yQJf6ffpnn/5fTiDbwL/zvfzIuRepXzUNpaE9qrI+fo3fhn6KlrbDnr+UqkWYR41DqpspVwV4/sodkyENFu9SQ==}
     engines: {node: 12.* || 14.* || >= 16}
+
+  ember-cli-showdown@9.0.2:
+    resolution: {integrity: sha512-uNZHfNeWuv9K0bdCjG3phWtDNjns67TDl6Q8oGStkNEVn8/Py3vL94bMf4WPZkPUb6yMPq0S3z4LPTiABUAEvQ==}
+    engines: {node: '>= 18'}
 
   ember-cli-sri@2.1.1:
     resolution: {integrity: sha512-YG/lojDxkur9Bnskt7xB6gUOtJ6aPl/+JyGYm9HNDk3GECVHB3SMN3rlGhDKHa1ndS5NK2W2TSLb9bzRbGlMdg==}
@@ -7332,6 +7339,10 @@ packages:
 
   showdown@1.9.1:
     resolution: {integrity: sha512-9cGuS382HcvExtf5AHk7Cb4pAeQQ+h0eTr33V1mu+crYWV4KvWAw6el92bDrqGEk5d46Ai/fhbEUwqJ/mTCNEA==}
+    hasBin: true
+
+  showdown@2.1.0:
+    resolution: {integrity: sha512-/6NVYu4U819R2pUIk79n67SYgJHWCce0a5xTP979WbNp0FL9MN1I1QK662IDU1b6JzKTvmhgI7T7JYIxBi3kMQ==}
     hasBin: true
 
   side-channel-list@1.0.0:
@@ -13085,6 +13096,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  ember-cli-showdown@9.0.2(webpack@5.102.1):
+    dependencies:
+      '@babel/core': 7.28.4
+      ember-auto-import: 2.11.1(webpack@5.102.1)
+      ember-cli-babel: 8.2.0(@babel/core@7.28.4)
+      ember-cli-htmlbars: 6.3.0
+      showdown: 2.1.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+      - webpack
+
   ember-cli-sri@2.1.1:
     dependencies:
       broccoli-sri-hash: 2.1.2
@@ -17899,6 +17922,10 @@ snapshots:
   showdown@1.9.1:
     dependencies:
       yargs: 14.2.3
+
+  showdown@2.1.0:
+    dependencies:
+      commander: 9.5.0
 
   side-channel-list@1.0.0:
     dependencies:

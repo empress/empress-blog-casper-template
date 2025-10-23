@@ -2,7 +2,7 @@ import RouteTemplate from 'ember-route-template';
 
 import SiteNav from '../components/site-nav';
 import ResponsiveImage from 'ember-responsive-image/components/responsive-image';
-import markdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
+import MarkdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
 
 export default RouteTemplate(
   <template>
@@ -37,9 +37,7 @@ into the {body} of the default.hbs template }}
             {{/if}}
 
             <section class="post-full-content">
-              <div class="post-content">
-                {{markdownToHtml post.content tagName=""}}
-              </div>
+              <MarkdownToHtml @markdown={{post.content}} class="post-content" />
             </section>
 
           </article>

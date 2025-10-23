@@ -2,7 +2,7 @@ import RouteTemplate from 'ember-route-template';
 
 import { LinkTo } from '@ember/routing';
 import date from 'empress-blog-ghost-helpers/helpers/date';
-import markdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
+import MarkdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
 import plural from 'empress-blog-ghost-helpers/helpers/plural';
 import SiteNav from '../components/site-nav';
 import ResponsiveImage from 'ember-responsive-image/components/responsive-image';
@@ -63,9 +63,9 @@ into the {body} of the default.hbs template }}
             {{/if}}
 
             <section class="post-full-content">
-              <div class="post-content">
-                {{markdownToHtml post.content tagName=""}}
-              </div>
+
+              <MarkdownToHtml @markdown={{post.content}} class="post-content" />
+
             </section>
 
             {{! Email subscribe form at the bottom of the page }}
