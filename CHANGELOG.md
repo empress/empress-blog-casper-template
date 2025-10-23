@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-10-23)
+
+* empress-blog-casper-template 5.0.2 (patch)
+
+#### :house: Internal
+* `empress-blog-casper-template`
+  * [#70](https://github.com/empress/empress-blog-casper-template/pull/70) inline excerpt helper stop defining empress-blog peer ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-10-22)
 
 * empress-blog-casper-template 5.0.1 (patch)
