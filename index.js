@@ -44,6 +44,19 @@ module.exports = {
 
     app.options.postcssOptions = postcssOptions;
 
+    if (!app.options['responsive-image']) {
+      app.options['responsive-image'] = {
+        images: [
+          {
+            include: 'images/**/*',
+            removeSource: false,
+            quality: 80,
+            widths: [2000, 1000, 600, 300],
+          },
+        ],
+      };
+    }
+
     this._super.included.apply(this, arguments);
   },
 
