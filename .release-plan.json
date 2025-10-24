@@ -2,17 +2,21 @@
   "solution": {
     "empress-blog-casper-template": {
       "impact": "patch",
-      "oldVersion": "5.0.2",
-      "newVersion": "5.0.3",
+      "oldVersion": "5.0.3",
+      "newVersion": "5.0.4",
       "tagName": "latest",
       "constraints": [
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-10-23)\n\n* empress-blog-casper-template 5.0.3 (patch)\n\n#### :bug: Bug Fix\n* `empress-blog-casper-template`\n  * [#72](https://github.com/empress/empress-blog-casper-template/pull/72) add ember-cli-showdown dependency ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-10-24)\n\n* empress-blog-casper-template 5.0.4 (patch)\n\n#### :bug: Bug Fix\n* `empress-blog-casper-template`\n  * [#74](https://github.com/empress/empress-blog-casper-template/pull/74) make author reference work for old ember-data ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `empress-blog-casper-template`\n  * [#76](https://github.com/empress/empress-blog-casper-template/pull/76) update empress-blog ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
