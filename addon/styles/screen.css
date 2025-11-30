@@ -433,7 +433,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card-tags {
     display: block;
     margin-bottom: 4px;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 1.2rem;
     line-height: 1.15em;
     font-weight: 500;
@@ -586,7 +586,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .reading-time {
     flex-shrink: 0;
     margin-left: 20px;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 1.2rem;
     line-height: 33px;
     font-weight: 500;
@@ -690,7 +690,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 1.4rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -1182,7 +1182,7 @@ Usage (In Ghost editor):
 
 .subscribe-form p {
     margin-bottom: 1em;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 2.2rem;
     line-height: 1.55em;
     letter-spacing: 0.2px;
@@ -1205,7 +1205,7 @@ Usage (In Ghost editor):
     padding: 10px;
     width: 100%;
     border: color(var(--lightgrey) l(+7%)) 1px solid;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 1.8rem;
     line-height: 1em;
     font-weight: normal;
@@ -1316,7 +1316,7 @@ Usage (In Ghost editor):
 
 .author-card-content p {
     margin: 0;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     line-height: 1.3em;
 }
 
@@ -1329,7 +1329,7 @@ Usage (In Ghost editor):
     display: block;
     padding: 9px 16px;
     border: color(var(--midgrey) l(+20%)) 1px solid;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 1.2rem;
     line-height: 1;
     font-weight: 500;
@@ -1362,7 +1362,7 @@ Usage (In Ghost editor):
 
 .post-full-authors-content p {
     margin-bottom: 0;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 1.4rem;
     letter-spacing: 0.2px;
     text-align: center;
@@ -2041,7 +2041,7 @@ Usage (In Ghost editor):
 
 .error-description {
     margin: 0;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 3rem;
     line-height: 1.3em;
     font-weight: 400;
@@ -2140,7 +2140,7 @@ Usage (In Ghost editor):
     padding: 14px 20px;
     width: 100%;
     border: none;
-    color: var(--midgrey);
+    color: var(--midgrey-text);
     font-size: 2rem;
     line-height: 1em;
     font-weight: normal;
