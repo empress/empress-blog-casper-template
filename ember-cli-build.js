@@ -1,8 +1,15 @@
-'use strict';
-
+'use strict';;
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-module.exports = function (defaults) {
+const {
+  compatBuild
+} = require("@embroider/compat");
+
+module.exports = async function(defaults) {
+  const {
+    buildOnce
+  } = await import("@embroider/vite");
+
   const app = new EmberAddon(defaults, {
     fingerprint: {
       extensions: ['js', 'css', 'map'],
@@ -17,11 +24,5 @@ module.exports = function (defaults) {
   */
 
   const { maybeEmbroider } = require('@embroider/test-setup');
-  return maybeEmbroider(app, {
-    skipBabel: [
-      {
-        package: 'qunit',
-      },
-    ],
-  });
+  return compatBuild(app, buildOnce);
 };

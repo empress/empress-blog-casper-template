@@ -1,0 +1,46 @@
+import SiteNav from '../site-nav.gjs';
+import ResponsiveImage from 'ember-responsive-image/components/responsive-image';
+import MarkdownToHtml from 'ember-cli-showdown/components/markdown-to-html';
+
+<template>
+  {{! template-lint-disable no-duplicate-landmark-elements }}
+  {{!< default}}
+  {{! The tag above means: insert everything in this file
+into the {body} of the default.hbs template }}
+
+  {{! The big featured header, it uses blog cover image as a BG if available }}
+  <header class="site-header outer">
+    <div class="inner">
+      <SiteNav />
+    </div>
+  </header>
+
+  {{! Everything inside the #post tags pulls data from the post }}
+  {{#let @model as |post|}}
+
+    <main id="site-main" class="site-main outer">
+      <div class="inner">
+
+        <article class="post-full {{unless post.image 'no-image'}}">
+
+          <header class="post-full-header">
+            <h1 class="post-full-title">{{post.title}}</h1>
+          </header>
+
+          {{#if post.image}}
+            <figure class="post-full-image">
+              <ResponsiveImage @src={{post.image}} />
+            </figure>
+          {{/if}}
+
+          <section class="post-full-content">
+            <MarkdownToHtml @markdown={{post.content}} class="post-content" />
+          </section>
+
+        </article>
+
+      </div>
+    </main>
+
+  {{/let}}
+</template>
