@@ -19,7 +19,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "files": "dist",
+  "files": ["dist"],
   "release-plan": {
     "semverIncrementAs": {
       "major": "premajor",
