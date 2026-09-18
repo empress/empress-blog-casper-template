@@ -143,32 +143,7 @@
   "ember-addon": {
     "version": 2,
     "demoURL": "https://empress-blog-casper-template.netlify.com",
-    "app-js": {
-      "./components/byline-multiple.js": "./dist/_app_/components/byline-multiple.js",
-      "./components/byline-single.js": "./dist/_app_/components/byline-single.js",
-      "./components/floating-header.js": "./dist/_app_/components/floating-header.js",
-      "./components/header.js": "./dist/_app_/components/header.js",
-      "./components/navigation-links.js": "./dist/_app_/components/navigation-links.js",
-      "./components/post-card.js": "./dist/_app_/components/post-card.js",
-      "./components/site-nav.js": "./dist/_app_/components/site-nav.js",
-      "./components/svg-icons/avatar.js": "./dist/_app_/components/svg-icons/avatar.js",
-      "./components/svg-icons/facebook.js": "./dist/_app_/components/svg-icons/facebook.js",
-      "./components/svg-icons/ghost-logo.js": "./dist/_app_/components/svg-icons/ghost-logo.js",
-      "./components/svg-icons/infinity.js": "./dist/_app_/components/svg-icons/infinity.js",
-      "./components/svg-icons/location.js": "./dist/_app_/components/svg-icons/location.js",
-      "./components/svg-icons/point.js": "./dist/_app_/components/svg-icons/point.js",
-      "./components/svg-icons/rss.js": "./dist/_app_/components/svg-icons/rss.js",
-      "./components/svg-icons/twitter.js": "./dist/_app_/components/svg-icons/twitter.js",
-      "./components/svg-icons/website.js": "./dist/_app_/components/svg-icons/website.js",
-      "./components/templates/application.js": "./dist/_app_/components/templates/application.js",
-      "./components/templates/author.js": "./dist/_app_/components/templates/author.js",
-      "./components/templates/error.js": "./dist/_app_/components/templates/error.js",
-      "./components/templates/index.js": "./dist/_app_/components/templates/index.js",
-      "./components/templates/page.js": "./dist/_app_/components/templates/page.js",
-      "./components/templates/post.js": "./dist/_app_/components/templates/post.js",
-      "./components/templates/tag.js": "./dist/_app_/components/templates/tag.js",
-      "./helpers/excerpt.js": "./dist/_app_/helpers/excerpt.js"
-    }
+    "app-js": {}
   },
   "fastbootDependencies": [
     "crypto"
