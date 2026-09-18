@@ -2,6 +2,17 @@
 
 ## Release (2026-09-18)
 
+* empress-blog-casper-template 6.0.0-next.3 (patch)
+
+#### :house: Internal
+* `empress-blog-casper-template`
+  * [#84](https://github.com/empress/empress-blog-casper-template/pull/84) stop providing app-rexports ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-09-18)
+
 * empress-blog-casper-template 6.0.0-next.2 (patch)
 
 #### :house: Internal
