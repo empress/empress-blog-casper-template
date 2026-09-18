@@ -1,5 +1,24 @@
 # Changelog
 
+## Release (2026-09-18)
+
+* empress-blog-casper-template 6.0.0-next.0 (major)
+
+#### :boom: Breaking Change
+* `empress-blog-casper-template`
+  * [#77](https://github.com/empress/empress-blog-casper-template/pull/77) v2 addon experiment ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `empress-blog-casper-template`
+  * [#74](https://github.com/empress/empress-blog-casper-template/pull/74) make author reference work for old ember-data ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `empress-blog-casper-template`
+  * [#76](https://github.com/empress/empress-blog-casper-template/pull/76) update empress-blog ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-10-23)
 
 * empress-blog-casper-template 5.0.3 (patch)
