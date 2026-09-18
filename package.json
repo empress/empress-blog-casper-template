@@ -19,6 +19,7 @@
     "doc": "doc",
     "test": "tests"
   },
+  "files": "dist",
   "release-plan": {
     "semverIncrementAs": {
       "major": "premajor",
@@ -44,7 +45,9 @@
     "start": "vite",
     "test": "concurrently \"pnpm:lint\" \"pnpm:test:*\" --names \"lint,test:\"",
     "test:ember": "vite build --mode development && ember test --path dist",
-    "prepack": "rollup --config"
+    "prepare": "rollup --config",
+    "prepack": "rollup --config",
+    "prepublishOnly": "rollup --config"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.8.9",
