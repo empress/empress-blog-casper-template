@@ -2,6 +2,17 @@
 
 ## Release (2026-09-18)
 
+* empress-blog-casper-template 6.0.0-next.2 (patch)
+
+#### :house: Internal
+* `empress-blog-casper-template`
+  * [#82](https://github.com/empress/empress-blog-casper-template/pull/82) actually fix publish ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-09-18)
+
 * empress-blog-casper-template 6.0.0-next.1 (patch)
 
 #### :house: Internal
