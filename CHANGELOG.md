@@ -2,6 +2,17 @@
 
 ## Release (2026-09-18)
 
+* empress-blog-casper-template 6.0.0-next.4 (patch)
+
+#### :bug: Bug Fix
+* `empress-blog-casper-template`
+  * [#86](https://github.com/empress/empress-blog-casper-template/pull/86) update ghost helpers ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-09-18)
+
 * empress-blog-casper-template 6.0.0-next.3 (patch)
 
 #### :house: Internal

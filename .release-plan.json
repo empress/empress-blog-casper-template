@@ -2,17 +2,17 @@
   "solution": {
     "empress-blog-casper-template": {
       "impact": "patch",
-      "oldVersion": "6.0.0-next.2",
-      "newVersion": "6.0.0-next.3",
+      "oldVersion": "6.0.0-next.3",
+      "newVersion": "6.0.0-next.4",
       "tagName": "next",
       "constraints": [
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-09-18)\n\n* empress-blog-casper-template 6.0.0-next.3 (patch)\n\n#### :house: Internal\n* `empress-blog-casper-template`\n  * [#84](https://github.com/empress/empress-blog-casper-template/pull/84) stop providing app-rexports ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-09-18)\n\n* empress-blog-casper-template 6.0.0-next.4 (patch)\n\n#### :bug: Bug Fix\n* `empress-blog-casper-template`\n  * [#86](https://github.com/empress/empress-blog-casper-template/pull/86) update ghost helpers ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
