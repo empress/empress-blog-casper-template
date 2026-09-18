@@ -19,6 +19,15 @@
     "doc": "doc",
     "test": "tests"
   },
+  "release-plan": {
+    "semverIncrementAs": {
+      "major": "prerelease",
+      "minor": "prerelease",
+      "patch": "prerelease"
+    },
+    "semverIncrementTag": "next",
+    "publishTag": "next"
+  },
   "scripts": {
     "build": "ember build --environment=production",
     "ember-compatibility-test": "ember try:each",

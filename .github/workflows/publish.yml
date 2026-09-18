@@ -9,6 +9,7 @@ on:
     branches:
       - main
       - master
+      - next
     paths:
       - '.release-plan.json'
 
@@ -31,13 +32,18 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           # This creates an .npmrc that reads the NODE_AUTH_TOKEN environment variable
           registry-url: 'https://registry.npmjs.org'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: npm install -g npm@latest # we are doing this to make sure theat the gloabally installed npm is new enough to support OIDC
       - name: Publish to NPM
-        run: NPM_CONFIG_PROVENANCE=true pnpm release-plan publish
+        # run: NPM_CONFIG_PROVENANCE=true pnpm release-plan publish --publish-branch=next
+        run: |
+          if [ ${{ github.ref }} = "refs/heads/next" ]; then
+            pnpm release-plan publish --publish-branch=next --github-prerelease
+          else
+            pnpm release-plan publish
+          fi
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
