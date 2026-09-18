@@ -21,7 +21,7 @@
   },
   "release-plan": {
     "semverIncrementAs": {
-      "major": "prerelease",
+      "major": "premajor",
       "minor": "prerelease",
       "patch": "prerelease"
     },
