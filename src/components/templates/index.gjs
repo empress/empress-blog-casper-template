@@ -1,0 +1,53 @@
+import Header from '../header.gjs';
+import SiteNav from '../site-nav.gjs';
+import PostCard from '../post-card.gjs';
+import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
+import Component from '@glimmer/component';
+import { service } from '@ember/service';
+
+export default class extends Component {
+  @service blog;
+<template>
+  {{! template-lint-disable no-curly-component-invocation }}
+  {{!< default}}
+  {{! The tag above means: insert everything in this file
+into the {body} of the default.hbs template }}
+
+  <Header @background={{this.blog.coverImage}}>
+    {{!Special header.hbs partial to generate the <header> tag}}
+    <div class="inner">
+      <div class="site-header-content">
+        <h1 class="site-title">
+          {{#if this.blog.logo}}
+            <img
+              class="site-logo"
+              src={{this.blog.logo}}
+              alt={{this.blog.title}}
+            />
+          {{else}}
+            {{this.blog.title}}
+          {{/if}}
+        </h1>
+        <h2 class="site-description">{{this.blog.description}}</h2>
+      </div>
+      <SiteNav />
+    </div>
+  </Header>
+
+  {{! The main content area }}
+  <main id="site-main" class="site-main outer">
+    <div class="inner">
+
+      <div class="post-feed">
+        {{#each (sortBy "date:desc" @model) as |post index|}}
+
+          {{! The tag below includes the markup for each post - partials/post-card.hbs }}
+          <PostCard @index={{index}} @post={{post}} />
+
+        {{/each}}
+      </div>
+
+    </div>
+  </main>
+</template>
+}
