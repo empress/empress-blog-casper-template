@@ -2,8 +2,8 @@
   "solution": {
     "empress-blog-casper-template": {
       "impact": "patch",
-      "oldVersion": "6.0.0-next.0",
-      "newVersion": "6.0.0-next.1",
+      "oldVersion": "6.0.0-next.1",
+      "newVersion": "6.0.0-next.2",
       "tagName": "next",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-09-18)\n\n* empress-blog-casper-template 6.0.0-next.1 (patch)\n\n#### :house: Internal\n* `empress-blog-casper-template`\n  * [#80](https://github.com/empress/empress-blog-casper-template/pull/80) Fix deployment ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-09-18)\n\n* empress-blog-casper-template 6.0.0-next.2 (patch)\n\n#### :house: Internal\n* `empress-blog-casper-template`\n  * [#82](https://github.com/empress/empress-blog-casper-template/pull/82) actually fix publish ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
