@@ -1,19 +1,11 @@
 {
   "solution": {
     "empress-blog-casper-template": {
-      "impact": "major",
-      "oldVersion": "5.0.3",
-      "newVersion": "6.0.0-next.0",
+      "impact": "patch",
+      "oldVersion": "6.0.0-next.0",
+      "newVersion": "6.0.0-next.1",
       "tagName": "next",
       "constraints": [
-        {
-          "impact": "major",
-          "reason": "Appears in changelog section :boom: Breaking Change"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :house: Internal"
@@ -22,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-09-18)\n\n* empress-blog-casper-template 6.0.0-next.0 (major)\n\n#### :boom: Breaking Change\n* `empress-blog-casper-template`\n  * [#77](https://github.com/empress/empress-blog-casper-template/pull/77) v2 addon experiment ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `empress-blog-casper-template`\n  * [#74](https://github.com/empress/empress-blog-casper-template/pull/74) make author reference work for old ember-data ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `empress-blog-casper-template`\n  * [#76](https://github.com/empress/empress-blog-casper-template/pull/76) update empress-blog ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-09-18)\n\n* empress-blog-casper-template 6.0.0-next.1 (patch)\n\n#### :house: Internal\n* `empress-blog-casper-template`\n  * [#80](https://github.com/empress/empress-blog-casper-template/pull/80) Fix deployment ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
